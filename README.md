@@ -52,21 +52,21 @@ Customize the variables as needed.
    ```bash
    python3 run.py
 
-##Usage
-###Scraping API
+## Usage
+### Scraping API
 The API provides an endpoint to initiate the scraping process:
 
 - **Endpoint: `/scrape`**
 - **Method: `GET`**
 - **Parameters**:
     - ***`pages`***: (Optional) Number of pages to scrape. Example: ***`5`***.
-- ***`proxy`***: (Optional) Proxy URL to use for scraping.
+    - ***`proxy`***: (Optional) Proxy URL to use for scraping.
 - **Example Request**
     ```bash
-    GET /scrape?pages=3&proxy=http://myproxy:8000
+    GET /scrape'?'pages=3'&'proxy=http://myproxy:8000
 
-##Notifications
+## Notifications
 The application sends notifications upon the completion of the scraping process, which can be configured to use Slack or email.
 
-##Logging
+## Logging
 Logs are stored in the ***`logs`*** directory as ***`app.log`*** files. The log files are rotated to maintain a manageable size.
