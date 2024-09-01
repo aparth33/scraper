@@ -76,9 +76,10 @@ Logs are stored in the ***`logs`*** directory as ***`app.log`*** files. The log 
 - **Cache**: The Redis cache is used to store previously scraped products to avoid redundant updates. This can be configured in the cache_product method.
 ## Development
 ### Run Tests
-To run tests, you can use ***`pytest`***:
-    ```bash
-    pytest
+To run tests, you can use pytest:
+```bash
+pytest
+```
 
 ## Contact
 For any questions or issues, please contact agg09parth@gmail.com.
