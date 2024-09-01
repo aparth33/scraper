@@ -63,7 +63,7 @@ The API provides an endpoint to initiate the scraping process:
     - ***`proxy`***: (Optional) Proxy URL to use for scraping.
 - **Example Request**
     ```bash
-    GET /scrape'?'pages=3'&'proxy=http://myproxy:8000
+    GET /scrape`?`pages=3`&`proxy=http://myproxy:8000
 
 ## Notifications
 The application sends notifications upon the completion of the scraping process, which can be configured to use Slack or email.
