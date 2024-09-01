@@ -1,0 +1,11 @@
+# Ignore the images folder
+images/
+
+# Ignore the scraped_data.json file
+scraped_data.json
+
+# Ignore the .env file
+.env
+
+# Ignore all .log files in the 'logs' directory
+logs/*.log

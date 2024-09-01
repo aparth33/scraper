@@ -10,3 +10,5 @@ class Product(BaseModel):
 class ScrapeResult(BaseModel):
     status: str
     products_scraped: int
+    products_added: int
+    products_updated: int

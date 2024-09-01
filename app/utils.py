@@ -1,7 +1,7 @@
 import os
 import requests
 
-def save_image(url: str, title: str, save_dir="images") -> str:
+def save_image(url: str, title: str, save_dir=os.getenv('IMAGES_FOLDER')) -> str:
     
     # Ensure the directory exists
     if not os.path.exists(save_dir):
