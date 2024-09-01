@@ -27,6 +27,7 @@ class Scraper:
         new_products=set([])
         updated_products=set([])
         for page in range(1, pages + 1):
+            print("scraping page "+str(page)+" in progress")
             if page==1:
                 url = os.getenv('TARGET_WEBSITE')
             else:
@@ -54,7 +55,7 @@ class Scraper:
                         self.cache.cache_product(product)
         
             except requests.RequestException as e:
-                time.sleep(os.getenv('RETRY_TIME'))
+                time.sleep(int(os.getenv('RETRY_TIME')))
                 continue
 
         return scraped_products, new_products, updated_products

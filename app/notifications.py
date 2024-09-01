@@ -72,7 +72,7 @@ def send_slack_notification(message, webhook_url):
         print(f"Failed to send Slack notification: {e}")
 
 
-def notify(message: str):
+def notify(message: str, to_email: str, to_number: str):
     print(message)
     from_email=os.getenv('FROM_EMAIL')
     password=os.getenv('APP_PASSWORD')
@@ -81,22 +81,22 @@ def notify(message: str):
     webhook_url=os.getenv('SLACK_WEBHOOK_URL')
     
     # Use email
-    if len(from_email)>0 and len(password)>0:    
+    if len(from_email)>0 and len(password)>0 and to_email is not None and len(to_email)>0:    
         send_email(
             subject="Scraping Notification",
             smtp_server = os.getenv('SMTP_SERVER'),
             smtp_port = os.getenv('SMTP_PORT'),
             body=message,
             from_email=from_email,
-            to_email="aparth33@yahoo.co.in",
+            to_email=to_email,
             password=password
         )
 
     # Use SMS
-    if len(account_sid)>0 and len(auth_token)>0:
+    if len(account_sid)>0 and len(auth_token)>0 and to_number is not None and len(to_number)>0:
         send_sms(
             body=message,
-            to="+1234567890",
+            to=to_number,
             from_=os.getenv('FROM_SEND_SMS'),
             account_sid=account_sid,
             auth_token=auth_token
