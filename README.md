@@ -77,7 +77,7 @@ Logs are stored in the ***`logs`*** directory as ***`app.log`*** files. The log 
 
 ## Development
 ### Run Tests
-To run tests, you can use pytest:
+    To run tests, you can use ***`pytest`***:
     ```bash
     pytest
 
