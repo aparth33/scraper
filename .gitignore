@@ -9,3 +9,6 @@ scraped_data.json
 
 # Ignore all .log files in the 'logs' directory
 logs
+
+# Ignore all DS_Store files
+**/.DS_Store
