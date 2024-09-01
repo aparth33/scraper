@@ -72,12 +72,11 @@ The application sends notifications upon the completion of the scraping process,
 Logs are stored in the ***`logs`*** directory as ***`app.log`*** files. The log files are rotated to maintain a manageable size.
 
 ## Configuration
--**Storage Backends**: The project supports storing data in a local JSON file, MongoDB, or any other storage backend. You can configure the backend by modifying the Storage class in the code.
--**Cache**: The Redis cache is used to store previously scraped products to avoid redundant updates. This can be configured in the cache_product method.
-
+- **Storage Backends**: The project supports storing data in a local JSON file, MongoDB, or any other storage backend. You can configure the backend by modifying the Storage class in the code.
+- **Cache**: The Redis cache is used to store previously scraped products to avoid redundant updates. This can be configured in the cache_product method.
 ## Development
 ### Run Tests
-    To run tests, you can use ***`pytest`***:
+To run tests, you can use ***`pytest`***:
     ```bash
     pytest
 
