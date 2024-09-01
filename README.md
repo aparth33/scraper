@@ -63,10 +63,24 @@ The API provides an endpoint to initiate the scraping process:
     - ***`proxy`***: (Optional) Proxy URL to use for scraping.
 - **Example Request**
     ```bash
-    GET /scrape`?`pages=3`&`proxy=http://myproxy:8000
+    GET /scrape?pages=3&proxy=http://myproxy:8000
 
 ## Notifications
 The application sends notifications upon the completion of the scraping process, which can be configured to use Slack or email.
 
 ## Logging
 Logs are stored in the ***`logs`*** directory as ***`app.log`*** files. The log files are rotated to maintain a manageable size.
+
+## Configuration
+-**Storage Backends**: The project supports storing data in a local JSON file, MongoDB, or any other storage backend. You can configure the backend by modifying the Storage class in the code.
+-**Cache**: The Redis cache is used to store previously scraped products to avoid redundant updates. This can be configured in the cache_product method.
+
+## Development
+### Run Tests
+To run tests, you can use pytest:
+    ```bash
+    pytest
+
+## Contact
+For any questions or issues, please contact agg09parth@gmail.com.
+
